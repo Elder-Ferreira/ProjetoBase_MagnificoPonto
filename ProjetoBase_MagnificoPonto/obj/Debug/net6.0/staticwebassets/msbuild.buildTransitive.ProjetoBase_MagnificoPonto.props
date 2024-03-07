@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\ProjetoBase_MagnificoPonto.props" />
+</Project>

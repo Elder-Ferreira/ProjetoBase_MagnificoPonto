@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ProjetoBase_MagnificoPonto.props" />
+</Project>
