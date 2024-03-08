@@ -75,3 +75,4 @@ C:\Workspace\ProjetoBase_MagnificoPonto\ProjetoBase_MagnificoPonto\obj\Debug\net
 C:\Workspace\ProjetoBase_MagnificoPonto\ProjetoBase_MagnificoPonto\obj\Debug\net6.0\ProjetoBase_MagnificoPonto.pdb
 C:\Workspace\ProjetoBase_MagnificoPonto\ProjetoBase_MagnificoPonto\obj\Debug\net6.0\ProjetoBase_MagnificoPonto.genruntimeconfig.cache
 C:\Workspace\ProjetoBase_MagnificoPonto\ProjetoBase_MagnificoPonto\obj\Debug\net6.0\ref\ProjetoBase_MagnificoPonto.dll
+C:\Workspace\ProjetoBase_MagnificoPonto\ProjetoBase_MagnificoPonto\obj\Debug\net6.0\ProjetoBase_MagnificoPonto.sourcelink.json
