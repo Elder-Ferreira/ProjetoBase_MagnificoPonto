@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using ProjetoBase_MagnificoPonto.Models;
 
 namespace ProjetoBase_MagnificoPonto.Data
 {
@@ -9,5 +10,7 @@ namespace ProjetoBase_MagnificoPonto.Data
             : base(options)
         {
         }
+
+        public DbSet<UsuarioModel> Usuarios { get; set; }
     }
 }
