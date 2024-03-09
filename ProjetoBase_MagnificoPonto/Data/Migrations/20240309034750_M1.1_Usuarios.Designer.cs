@@ -12,8 +12,8 @@ using ProjetoBase_MagnificoPonto.Data;
 namespace ProjetoBase_MagnificoPonto.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240309025436_M01.2_Usuarios")]
-    partial class M012_Usuarios
+    [Migration("20240309034750_M1.1_Usuarios")]
+    partial class M11_Usuarios
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
