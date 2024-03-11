@@ -1,4 +1,4 @@
-## Projeto Base Mangnifico Ponto
+## Projeto Base Magnífico Ponto
 
 - Implementar registro e login de usuário usando Identity (implementado parcialmente)
 - Criar, conectar e testar persistência de dados junto ao banco de dados (ok)
