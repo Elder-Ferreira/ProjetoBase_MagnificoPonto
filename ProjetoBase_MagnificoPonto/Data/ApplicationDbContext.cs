@@ -12,5 +12,6 @@ namespace ProjetoBase_MagnificoPonto.Data
         }
 
         public DbSet<UsuarioModel> Usuarios { get; set; }
+        
     }
 }
