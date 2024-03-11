@@ -2,11 +2,9 @@
 
 namespace ProjetoBase_MagnificoPonto.Models
 {
+    [Display(Name = "Dados para entrega")]
     public class EnderecoModel
-    {
-        [Display(Name = "Dados para entrega")]
-        public class UsuarioModel
-        {
+    {    
             [Key]
             public int Id { get; set; }
             [Required]
@@ -31,9 +29,4 @@ namespace ProjetoBase_MagnificoPonto.Models
             [Required]
             public string Referencia { get; set; }
         }
-
-        public int MyProperty { get; set; }
     }
-
-}
-
