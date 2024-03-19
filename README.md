@@ -4,6 +4,7 @@
 - Criar, conectar e testar persistência de dados junto ao banco de dados (ok)
 - Criar Crud para produtos (ok)
 - Implementar rotas de acesso para paginas (ok)
-- Listar todos os produtos cadastrados em uma página separada (a fazer)
+- Listar todos os produtos cadastrados em uma View Produtos separada (a fazer)
+- Criar associação Pedidos e Produtos
 - Inserir galeria de imagens (a fazer)
-- Formatar textos formulário de produtos (a fazer)
+- Formatar textos formulário de produtos (ok)
