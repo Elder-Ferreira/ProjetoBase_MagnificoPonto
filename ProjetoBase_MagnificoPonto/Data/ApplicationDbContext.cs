@@ -12,7 +12,6 @@ namespace ProjetoBase_MagnificoPonto.Data
         }
 
         public DbSet<ProdutoModel> Produtos { get; set; }
-        public DbSet<EnderecoModel> Enderecos { get; set; }
 
     }
 }
