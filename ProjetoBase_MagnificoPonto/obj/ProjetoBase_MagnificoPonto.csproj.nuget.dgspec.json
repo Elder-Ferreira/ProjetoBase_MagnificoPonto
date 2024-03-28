@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Workspace\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto.csproj": {}
+    "C:\\Workspace\\ProjetoBase_MagnificoPonto\\Nova pasta\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto.csproj": {}
   },
   "projects": {
-    "C:\\Workspace\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto.csproj": {
+    "C:\\Workspace\\ProjetoBase_MagnificoPonto\\Nova pasta\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Workspace\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto.csproj",
+        "projectUniqueName": "C:\\Workspace\\ProjetoBase_MagnificoPonto\\Nova pasta\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto.csproj",
         "projectName": "ProjetoBase_MagnificoPonto",
-        "projectPath": "C:\\Workspace\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto.csproj",
+        "projectPath": "C:\\Workspace\\ProjetoBase_MagnificoPonto\\Nova pasta\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto.csproj",
         "packagesPath": "C:\\Users\\Windows 10\\.nuget\\packages\\",
-        "outputPath": "C:\\Workspace\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\obj\\",
+        "outputPath": "C:\\Workspace\\ProjetoBase_MagnificoPonto\\Nova pasta\\ProjetoBase_MagnificoPonto\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -60,15 +60,17 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.27, )"
+              "version": "[6.0.28, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
-              "version": "[6.0.27, )"
+              "version": "[6.0.28, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.27, )"
+              "version": "[6.0.28, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
