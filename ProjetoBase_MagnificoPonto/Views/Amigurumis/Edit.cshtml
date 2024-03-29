@@ -1,4 +1,5 @@
-﻿@model ProjetoBase_MagnificoPonto.Models.Amigurumi
+﻿@using ProjetoBase_MagnificoPonto.Enums
+@model ProjetoBase_MagnificoPonto.Models.Amigurumi
 
 @{
     ViewData["Title"] = "Edit";
@@ -25,18 +26,18 @@
             </div>
             <div class="form-group">
                 <label asp-for="Cor" class="control-label"></label>
-                <select asp-for="Cor" class="form-control"></select>
+                <select asp-for="Cor" class="form-control" asp-items="Html.GetEnumSelectList<CorType>()"><option>Selecione a cor</option></select>
                 <span asp-validation-for="Cor" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Valor" class="control-label"></label>
-                <input asp-for="Valor" class="form-control" />
-                <span asp-validation-for="Valor" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Preco" class="control-label"></label>
                 <input asp-for="Preco" class="form-control" />
                 <span asp-validation-for="Preco" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descrição" class="control-label"></label>
+                <input asp-for="Descrição" class="form-control" />
+                <span asp-validation-for="Descrição" class="text-danger"></span>
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">

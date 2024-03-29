@@ -14,10 +14,14 @@ namespace ProjetoBase_MagnificoPonto.Models
         [Required]
         public CorType Cor { get; set; }
         [Required]
-        [Column(TypeName = "decimal(18,2)")]
-        public decimal Valor { get; set; }
+        [Display(Name = "Preço")]
+        [DataType(DataType.Currency)]
+        [DisplayFormat(DataFormatString = "{0:C2}")]
+        public decimal Preco { get; set; }
         [Required]
-        public double Preco { get; set; }
+        [StringLength(800)]
+        [Display(Name = "Descrição do item")]
+        public string Descrição { get; set; }
         [Required]
         public bool ProntaEntrega { get; set; }
         [Display(Name = "Tempo para confecção")]

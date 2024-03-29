@@ -54,7 +54,7 @@ namespace ProjetoBase_MagnificoPonto.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,Referencia,Cor,Valor,Preco,ProntaEntrega,TempoConfeccao")] Amigurumi amigurumi)
+        public async Task<IActionResult> Create([Bind("Id,Nome,Referencia,Cor,Preco,Descrição,ProntaEntrega,TempoConfeccao")] Amigurumi amigurumi)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace ProjetoBase_MagnificoPonto.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Referencia,Cor,Valor,Preco,ProntaEntrega,TempoConfeccao")] Amigurumi amigurumi)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Referencia,Cor,Preco,Descrição,ProntaEntrega,TempoConfeccao")] Amigurumi amigurumi)
         {
             if (id != amigurumi.Id)
             {
