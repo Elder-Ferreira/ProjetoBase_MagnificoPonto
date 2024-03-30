@@ -12,8 +12,8 @@ using ProjetoBase_MagnificoPonto.Data;
 namespace ProjetoBase_MagnificoPonto.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240329011557_M04")]
-    partial class M04
+    [Migration("20240330030332_M01")]
+    partial class M01
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -233,6 +233,9 @@ namespace ProjetoBase_MagnificoPonto.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Categoria")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Cor")
                         .HasColumnType("int");
