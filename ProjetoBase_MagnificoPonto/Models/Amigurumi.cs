@@ -18,14 +18,15 @@ namespace ProjetoBase_MagnificoPonto.Models
         [DataType(DataType.Currency)]
         [DisplayFormat(DataFormatString = "{0:C2}")]
         public decimal Preco { get; set; }
+        public string Categoria { get; set; }
         [Required]
         [StringLength(800)]
         [Display(Name = "Descrição do item")]
         public string Descrição { get; set; }
         [Required]
         public bool ProntaEntrega { get; set; }
-        [Display(Name = "Tempo para confecção")]
         [Required]
+        [Display(Name = "Tempo para confecção")]        
         public int TempoConfeccao { get; set; }
     }
 }
