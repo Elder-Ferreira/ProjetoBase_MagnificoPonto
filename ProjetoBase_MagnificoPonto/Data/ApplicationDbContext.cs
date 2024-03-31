@@ -14,6 +14,6 @@ namespace ProjetoBase_MagnificoPonto.Data
         public DbSet<ProdutoModel> Produtos { get; set; }
         public DbSet<Amigurumi> Amigurumis { get; set; }
         public DbSet<Galeria> Galerias { get; set; }
-
+        public DbSet<ImagemModel> Imagens { get; set; }
     }
 }

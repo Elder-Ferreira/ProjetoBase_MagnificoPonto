@@ -278,9 +278,36 @@ namespace ProjetoBase_MagnificoPonto.Migrations
                     b.Property<string>("Nome")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<decimal>("Preco")
+                        .HasPrecision(16, 2)
+                        .HasColumnType("decimal(16,2)");
+
                     b.HasKey("Id");
 
                     b.ToTable("Galerias");
+                });
+
+            modelBuilder.Entity("ProjetoBase_MagnificoPonto.Models.ImagemModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("CaminhoImagem")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nome")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Preco")
+                        .HasPrecision(16, 2)
+                        .HasColumnType("decimal(16,2)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Imagens");
                 });
 
             modelBuilder.Entity("ProjetoBase_MagnificoPonto.Models.ProdutoModel", b =>

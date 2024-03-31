@@ -18,7 +18,7 @@ namespace ProjetoBase_MagnificoPonto.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult ListaProdutos()
         {
             return View();
         }
