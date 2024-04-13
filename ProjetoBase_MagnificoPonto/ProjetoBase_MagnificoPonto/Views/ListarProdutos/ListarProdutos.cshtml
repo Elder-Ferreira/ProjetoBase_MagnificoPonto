@@ -1,0 +1,30 @@
+﻿@model IEnumerable<ProjetoBase_MagnificoPonto.Models.ProdutoModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Lista de produtos</h1>
+
+<table class="table">
+    
+    <tbody >
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <div class="col-lg-4 col-12 mb-3">
+             <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="..." alt="@Html.DisplayFor(modelItem => item.Nome)">
+              <div class="card-body">
+                        <h5 class="card-title">@Html.DisplayFor(modelItem => item.Nome)</h5>
+                        <p class="card-text">@Html.DisplayFor(modelItem => item.Preco)</p>
+                <a href="SaibaMais" class="btn btn-primary">Saiba mais</a>
+              </div>
+            </div>
+                </div>                    
+            </tr>
+        }
+    </tbody>
+</table>
+
