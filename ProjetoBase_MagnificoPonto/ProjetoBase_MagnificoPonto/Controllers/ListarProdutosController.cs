@@ -1,27 +1,24 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ProjetoBase_MagnificoPonto.Data;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using ProjetoBase_MagnificoPonto.Data;
 
 namespace ProjetoBase_MagnificoPonto.Controllers
 {
     public class ListarProdutosController : Controller
     {
-        public readonly ApplicationDbContext _context;
-
+        private readonly ApplicationDbContext _context;
         public ListarProdutosController(ApplicationDbContext context)
         {
             _context = context;
         }
-        public async Task<IActionResult>ListarProdutos()
-
+        public async Task<IActionResult> ListaProdutos()
         {
             var listarProdutos = await _context.Produtos.ToListAsync();
             return View(listarProdutos);
         }
 
-
         // GET: Produtos/Details/5
-        public async Task<IActionResult> SaibaMais(int? id)
+        public async Task<IActionResult> InfoProdutos(int? id)
         {
             if (id == null || _context.Produtos == null)
             {
@@ -37,7 +34,5 @@ namespace ProjetoBase_MagnificoPonto.Controllers
 
             return View(produtoModel);
         }
-
-
     }
 }

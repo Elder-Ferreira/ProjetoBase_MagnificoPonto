@@ -1,9 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProjetoBase_MagnificoPonto.Models
 {
-    
     [Table("Cadastro de Produtos")]
     public class ProdutoModel
     {
@@ -28,6 +27,7 @@ namespace ProjetoBase_MagnificoPonto.Models
         [Display(Name = "Preço")]
         [DataType(DataType.Currency)]
         [DisplayFormat(DataFormatString = "{0:C2}")]
+        [Range(1, 999.99, ErrorMessage = "O preço deve estar entre 1 e 999,99")]
         [Required(ErrorMessage = "Informe o preço do item!")]
         public decimal Preco { get; set; }
 
@@ -48,7 +48,7 @@ namespace ProjetoBase_MagnificoPonto.Models
         public bool ProntaEntrega { get; set; }
 
         [Display(Name = "Upload da imagem")]
-        [Required(ErrorMessage = "Insira uma imagem do produto!")]
+      //[Required(ErrorMessage = "Insira uma imagem do produto!")]
         public string ImageFileName { get; set; }
     }
 }

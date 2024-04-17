@@ -11441,11 +11441,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Workspace\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto.csproj",
+      "projectUniqueName": "C:\\Workspace\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto.csproj",
       "projectName": "ProjetoBase_MagnificoPonto",
-      "projectPath": "C:\\Workspace\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto.csproj",
+      "projectPath": "C:\\Workspace\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto.csproj",
       "packagesPath": "C:\\Users\\Windows 10\\.nuget\\packages\\",
-      "outputPath": "C:\\Workspace\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\obj\\",
+      "outputPath": "C:\\Workspace\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

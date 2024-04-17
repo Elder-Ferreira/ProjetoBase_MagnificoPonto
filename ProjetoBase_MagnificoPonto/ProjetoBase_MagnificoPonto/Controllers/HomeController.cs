@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using ProjetoBase_MagnificoPonto.Models;
+﻿using ProjetoBase_MagnificoPonto.Models;
+using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
 namespace ProjetoBase_MagnificoPonto.Controllers
@@ -15,7 +15,7 @@ namespace ProjetoBase_MagnificoPonto.Controllers
 
         public IActionResult Index()
         {
-            return View("HomePage");
+            return View();
         }
 
         public IActionResult Sobre()
@@ -28,8 +28,12 @@ namespace ProjetoBase_MagnificoPonto.Controllers
             return View();
         }
 
-
         public IActionResult Contato()
+        {
+            return View();
+        }
+
+        public IActionResult FAQs()
         {
             return View();
         }
@@ -38,6 +42,7 @@ namespace ProjetoBase_MagnificoPonto.Controllers
         {
             return View();
         }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
