@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Hosting;
 using ProjetoBase_MagnificoPonto.Data;
 using ProjetoBase_MagnificoPonto.Models;
 
@@ -13,16 +15,18 @@ namespace ProjetoBase_MagnificoPonto.Controllers
     public class ProdutosController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly IWebHostEnvironment _environment;
 
-        public ProdutosController(ApplicationDbContext context)
+        public ProdutosController(ApplicationDbContext context, IWebHostEnvironment environment)
         {
             _context = context;
+            _environment = environment;
         }
 
         // GET: Produtos
         public async Task<IActionResult> Index()
         {
-              return View(await _context.Produtos.ToListAsync());
+            return View(await _context.Produtos.ToListAsync());
         }
 
         // GET: Produtos/Details/5
@@ -52,15 +56,48 @@ namespace ProjetoBase_MagnificoPonto.Controllers
         // POST: Produtos/Create        
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,Referencia,Cor,Tamanho,Preco,Categoria,Descrição,TempoConfeccao,ProntaEntrega,ImageFileName")] ProdutoModel produtoModel)
+        public async Task<IActionResult> Create(ProdutoModelDto produtoModelDto)
         {
-            if (ModelState.IsValid)
+            if (produtoModelDto.ImageFile == null)
             {
-                _context.Add(produtoModel);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                ModelState.AddModelError("ImageFile","Insira a imagem");
             }
-            return View(produtoModel);
+
+            if (!ModelState.IsValid)
+            {
+                return View(produtoModelDto);
+            }
+
+            //Salvando ImageFile
+            string newFileName = DateTime.Now.ToString("yyyyMMddHHmmssfff");
+            newFileName += Path.GetExtension(produtoModelDto.ImageFile!.FileName);
+
+            string imageFullPath = _environment.WebRootPath + "/imgAmigurumis/" + newFileName;
+            using (var stream = System.IO.File.Create(imageFullPath))
+            {
+                produtoModelDto.ImageFile.CopyTo(stream);
+            }
+
+            //Salvar novo produto no banco de dados
+            ProdutoModel produto = new ProdutoModel()
+            {
+                Nome = produtoModelDto.Nome,
+                Referencia = produtoModelDto.Referencia,
+                Tamanho = produtoModelDto.Tamanho,
+                Preco = produtoModelDto.Preco,
+                Categoria = produtoModelDto.Categoria,
+                Descrição = produtoModelDto.Descrição,
+                TempoConfeccao = produtoModelDto.TempoConfeccao,
+                ProntaEntrega = produtoModelDto.ProntaEntrega,
+                ImageFileName = newFileName,
+            };
+
+            _context.Produtos.Add(produto);
+            await _context.SaveChangesAsync();
+
+
+            return RedirectToAction("Index", "Produtos");
+
         }
 
         // GET: Produtos/Edit/5
@@ -82,7 +119,7 @@ namespace ProjetoBase_MagnificoPonto.Controllers
         // POST: Produtos/Edit/5        
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Referencia,Cor,Tamanho,Preco,Categoria,Descrição,TempoConfeccao,ProntaEntrega,ImageFileName")] ProdutoModel produtoModel)
+        public async Task<IActionResult> Edit(int id, ProdutoModel produtoModel)
         {
             if (id != produtoModel.Id)
             {

@@ -12,8 +12,8 @@ using ProjetoBase_MagnificoPonto.Data;
 namespace ProjetoBase_MagnificoPonto.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240417210825_M02-AtualizacaoDB")]
-    partial class M02AtualizacaoDB
+    [Migration("20240421195835_M2.3_AtualizacaoDto")]
+    partial class M23_AtualizacaoDto
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -241,6 +241,9 @@ namespace ProjetoBase_MagnificoPonto.Migrations
                     b.Property<string>("Cor")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Descrição")
                         .IsRequired()

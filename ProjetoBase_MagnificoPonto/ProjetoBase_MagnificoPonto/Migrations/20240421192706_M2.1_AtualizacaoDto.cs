@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ProjetoBase_MagnificoPonto.Migrations
 {
-    public partial class M02AtualizacaoDB : Migration
+    public partial class M21_AtualizacaoDto : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

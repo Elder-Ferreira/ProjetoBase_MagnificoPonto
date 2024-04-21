@@ -47,6 +47,8 @@ namespace ProjetoBase_MagnificoPonto.Models
         [Required(ErrorMessage = "Informe se o produto possui estoque!")]
         public bool ProntaEntrega { get; set; }
 
+        public DateTime CreatedAt { get; set; }
+
         [Display(Name = "Upload da imagem")]
       //[Required(ErrorMessage = "Insira uma imagem do produto!")]
         public string ImageFileName { get; set; }
