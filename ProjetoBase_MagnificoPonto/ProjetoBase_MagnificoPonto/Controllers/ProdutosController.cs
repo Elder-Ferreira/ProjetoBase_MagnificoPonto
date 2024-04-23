@@ -15,12 +15,12 @@ namespace ProjetoBase_MagnificoPonto.Controllers
     public class ProdutosController : Controller
     {
         private readonly ApplicationDbContext _context;
-        private readonly IWebHostEnvironment _environment;
+        private string caminhoServidor;
 
         public ProdutosController(ApplicationDbContext context, IWebHostEnvironment environment)
         {
             _context = context;
-            _environment = environment;
+            caminhoServidor = environment.WebRootPath;
         }
 
         // GET: Produtos
@@ -55,49 +55,29 @@ namespace ProjetoBase_MagnificoPonto.Controllers
 
         // POST: Produtos/Create        
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(ProdutoModelDto produtoModelDto)
+        public async Task<IActionResult> Create(ProdutoModel produtoModel, IFormFile foto)
         {
-            if (produtoModelDto.ImageFile == null)
+            string caminhoParaSalvarImagem = caminhoServidor + "\\Amigurumis\\";
+            string novoNomeParaImagem = Guid.NewGuid().ToString() + "_" + foto.FileName;
+
+            if (!Directory.Exists(caminhoParaSalvarImagem))
             {
-                ModelState.AddModelError("ImageFile","Insira a imagem");
+                Directory.CreateDirectory(caminhoParaSalvarImagem);
             }
 
-            if (!ModelState.IsValid)
+            using (var stream = System.IO.File.Create(caminhoParaSalvarImagem + novoNomeParaImagem))
             {
-                return View(produtoModelDto);
+                foto.CopyTo(stream);
             }
 
-            //Salvando ImageFile
-            string newFileName = DateTime.Now.ToString("yyyyMMddHHmmssfff");
-            newFileName += Path.GetExtension(produtoModelDto.ImageFile!.FileName);
 
-            string imageFullPath = _environment.WebRootPath + "/imgAmigurumis/" + newFileName;
-            using (var stream = System.IO.File.Create(imageFullPath))
+            if (ModelState.IsValid)
             {
-                produtoModelDto.ImageFile.CopyTo(stream);
+                _context.Add(produtoModel);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
             }
-
-            //Salvar novo produto no banco de dados
-            ProdutoModel produto = new ProdutoModel()
-            {
-                Nome = produtoModelDto.Nome,
-                Referencia = produtoModelDto.Referencia,
-                Tamanho = produtoModelDto.Tamanho,
-                Preco = produtoModelDto.Preco,
-                Categoria = produtoModelDto.Categoria,
-                Descrição = produtoModelDto.Descrição,
-                TempoConfeccao = produtoModelDto.TempoConfeccao,
-                ProntaEntrega = produtoModelDto.ProntaEntrega,
-                ImageFileName = newFileName,
-            };
-
-            _context.Produtos.Add(produto);
-            await _context.SaveChangesAsync();
-
-
-            return RedirectToAction("Index", "Produtos");
-
+            return View(produtoModel);
         }
 
         // GET: Produtos/Edit/5
@@ -119,7 +99,7 @@ namespace ProjetoBase_MagnificoPonto.Controllers
         // POST: Produtos/Edit/5        
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, ProdutoModel produtoModel)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Referencia,Cor,Tamanho,Preco,Categoria,Descrição,TempoConfeccao,ProntaEntrega,ImageFileName")] ProdutoModel produtoModel)
         {
             if (id != produtoModel.Id)
             {
@@ -181,14 +161,45 @@ namespace ProjetoBase_MagnificoPonto.Controllers
             {
                 _context.Produtos.Remove(produtoModel);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool ProdutoModelExists(int id)
         {
-          return _context.Produtos.Any(e => e.Id == id);
+            return _context.Produtos.Any(e => e.Id == id);
         }
+
+
+        /*
+
+        public IActionResult Upload()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Upload(IFormFile ImageFileName)
+        {
+            string caminhoParaSalvarImagem = caminhoServidor + "\\Amigurumis\\";
+            string novoNomeParaImagem = Guid.NewGuid().ToString() + " " + ImageFileName.FileName;
+
+            if (!Directory.Exists(caminhoParaSalvarImagem))
+            {
+                Directory.CreateDirectory(caminhoParaSalvarImagem);
+            }
+
+            using (var stream = System.IO.File.Create(caminhoParaSalvarImagem + novoNomeParaImagem))
+            {
+                ImageFileName.CopyToAsync(stream);
+            }
+
+            return RedirectToAction("Index");
+        }
+
+        */
+
     }
 }
+

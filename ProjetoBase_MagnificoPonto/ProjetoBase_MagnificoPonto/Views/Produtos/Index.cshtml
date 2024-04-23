@@ -33,92 +33,94 @@
 
 <body>
 
-<h1>Lista de produtos</h1>
+    <h1>Lista de produtos</h1>
 
-<p>
-    <a class="btn btn-success" asp-action="Create">Inserir novo item</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @* @Html.DisplayNameFor(model => model.ImageFileName) *@ Foto
-            </th>
-            <th>
-                @* @Html.DisplayNameFor(model => model.Nome) *@ Amigurumi
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Referencia)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cor)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Tamanho)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Preco)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Categoria)
-            </th>            
-            <th>
-                @Html.DisplayNameFor(model => model.TempoConfeccao)
-            </th>
-            @*
-            <th>
+    <p>
+        <a class="btn btn-success" asp-action="Create">Inserir novo item</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr class="text-center">
+                <th>
+                    @* @Html.DisplayNameFor(model => model.ImageFileName) *@ Foto
+                </th>
+                <th>
+                    @* @Html.DisplayNameFor(model => model.Nome) *@ Amigurumi
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Referencia)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cor)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Tamanho)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Preco)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Categoria)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TempoConfeccao)
+                </th>
+                @*
+                <th>
                 @Html.DisplayNameFor(model => model.ProntaEntrega)
-            </th>
-            *@
-            <th>
-                 Gerenciar Produtos
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                    @Html.DisplayFor(modelItem => item.ImageFileName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Referencia)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cor)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Tamanho)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Preco)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Categoria)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TempoConfeccao) dias úteis
-            </td>
-            @*
-            <td>
+                </th>
+                *@
+                <th>
+                    Gerenciar Produtos
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="text-center align-middle">
+                    <td>
+                        <img src="/Amigurumis/6449e984-0a2b-4e67-a428-770d6998513b_Girafa.jpg" width="100" />
+                        @*<img src="/Amigurumis/@Html.DisplayFor(modelItem => item.ImageFileName)" width="150" />*@
+
+                    <td>
+                            @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                            @Html.DisplayFor(modelItem => item.Referencia)
+                    </td>
+                    <td>
+                            @Html.DisplayFor(modelItem => item.Cor)
+                    </td>
+                    <td>
+                            @Html.DisplayFor(modelItem => item.Tamanho)
+                    </td>
+                    <td>
+                            @Html.DisplayFor(modelItem => item.Preco)
+                    </td>
+                    <td>
+                            @Html.DisplayFor(modelItem => item.Categoria)
+                    </td>
+                    <td>
+                            @Html.DisplayFor(modelItem => item.TempoConfeccao) dias úteis
+                    </td>
+                        @*
+                <td>
                 @Html.DisplayFor(modelItem => item.ProntaEntrega)
-            </td> 
-            *@
-            <td>
-                <div>
-                    <a class="btn btn-warning btn-sm" asp-action="Edit" asp-route-id="@item.Id">Editar</a> 
-                    <a class="btn btn-info btn-sm" asp-action="Details" asp-route-id="@item.Id">Detalhes</a> 
-                    <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@item.Id">Apagar</a>
-                </div>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+                </td>
+                *@
+                    <td>
+                        <div>
+                            <a class="btn btn-warning btn-sm" asp-action="Edit" asp-route-id="@item.Id">Editar</a>
+                            <a class="btn btn-info btn-sm" asp-action="Details" asp-route-id="@item.Id">Detalhes</a>
+                            <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@item.Id">Apagar</a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 
 </body>
 
