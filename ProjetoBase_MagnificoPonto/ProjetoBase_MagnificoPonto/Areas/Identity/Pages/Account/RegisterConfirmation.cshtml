@@ -1,44 +1,14 @@
 ﻿@page
 @model RegisterConfirmationModel
 @{
-    ViewData["Title"] = "Register confirmation";
+    ViewData["Title"] = "Novo usuário cadastrado com sucesso!";
 }
 
 <h1>@ViewData["Title"]</h1>
-@{
-    if (@Model.DisplayConfirmAccountLink)
-    {
-        <div class="my-8">
-            <h5>Seja muito bem-vindo ao Magnífico Ponto!</h5>
-            <p>É um prazer imenso recebê-lo em nossa comunidade de compras online. Aqui no Magnífico Ponto, estamos empenhados em oferecer a você uma experiência de compra única e excepcional. Desde produtos de alta qualidade até um atendimento ao cliente de primeira classe, queremos garantir que cada interação sua conosco seja memorável.</p>
-            <p>Como novo membro, você agora faz parte de uma comunidade vibrante de entusiastas de compras, onde a variedade é vasta e as oportunidades são infinitas. Esteja preparado para explorar uma infinidade de produtos, desde eletrônicos de última geração até moda elegante, tudo a apenas um clique de distância.</p>
-            <p>Nossa equipe está aqui para tornar sua jornada de compras o mais suave e agradável possível. Se surgir alguma dúvida ou se precisar de assistência em qualquer momento, não hesite em entrar em contato conosco. Estamos aqui para ajudar.</p>
-            <p>Esperamos que sua experiência no Magnífico Ponto seja gratificante e que você encontre exatamente o que procura. Prepare-se para descobrir um novo mundo de compras online. Uma vez mais, seja muito bem-vindo!</p>
-            <p>Atenciosamente,<br>Equipe Magnífico Ponto</p>
-        </div>
-        <div class="row justify-content-center">
-            <a class="btn btn-success" asp-area="" asp-controller="Home" asp-action="Index">Clique aqui para entrar no site</a>
-        </div>
-    }
-    else
-    {
-<p>
-        Please check your email to confirm your account.
-</p>
-    }
-}
 
 
-
-@*
-
-@page
-@model RegisterConfirmationModel
-@{
-    ViewData["Title"] = "Novo usuário cadastrado com sucesso!";
- }
-<p> <br /> <br /> <br /></p>
-<h6 class="row justify-content-center">@ViewData["Title"]</h6>
+<h6 class="row justify-content-center text-dark">@ViewData["Title"]</h6>
+<br />
 
 
 <!doctype html>
@@ -72,25 +42,53 @@
 <body>
 
     <main>
+        @{
+            if (@Model.DisplayConfirmAccountLink)
+            {
+                <div class="my-8">
+                    <h5>Seja muito bem-vindo ao Magnífico Ponto!</h5>
+                    <p>
+                        É um prazer imenso recebê-lo em nossa comunidade de compras online. Aqui no Magnífico Ponto, estamos
+                        empenhados em oferecer a você uma experiência de compra única e excepcional. Desde amigurumis artesanais
+                        de alta qualidade até um atendimento ao cliente de primeira classe, queremos garantir que cada interação
+                        sua conosco seja memorável.
+                    </p>
+                    <p>
+                        Como novo membro, você agora faz parte de uma comunidade vibrante de entusiastas de compras, onde a
+                        variedade é vasta e as oportunidades são infinitas. Esteja preparado para explorar uma infinidade de
+                        produtos, desde adoráveis amigurumis até itens de decoração encantadores, tudo a apenas um clique de
+                        distância.
+                    </p>
+                    <p>
+                        Nossa equipe está aqui para tornar sua jornada de compras o mais suave e agradável possível. Se surgir
+                        alguma dúvida ou se precisar de assistência em qualquer momento, não hesite em entrar em contato
+                        conosco. Estamos aqui para ajudar.
+                    </p>
+                    <p>
+                        Esperamos que sua experiência no Magnífico Ponto seja gratificante e que você encontre exatamente o que
+                        procura. Prepare-se para descobrir um novo mundo de compras online. Uma vez mais, seja muito bem-vindo!
+                    </p>
+                    <p>Atenciosamente,<br>Equipe Magnífico Ponto</p>
+                </div>
+                <div class="text-center justify-content-center">
+                    <a class="btn btn-success" asp-area="Identity" asp-page="/Account/Login">
+                        Clique aqui para realizar login no
+                        site
+                    </a>
+                </div>
+            }
 
-<div class="my-8">
-    <h5>Seja muito bem-vindo ao Magnífico Ponto!</h5>
-    <p>É um prazer imenso recebê-lo em nossa comunidade de compras online. Aqui no Magnífico Ponto, estamos empenhados em oferecer a você uma experiência de compra única e excepcional. Desde produtos de alta qualidade até um atendimento ao cliente de primeira classe, queremos garantir que cada interação sua conosco seja memorável.</p>
-    <p>Como novo membro, você agora faz parte de uma comunidade vibrante de entusiastas de compras, onde a variedade é vasta e as oportunidades são infinitas. Esteja preparado para explorar uma infinidade de produtos, desde eletrônicos de última geração até moda elegante, tudo a apenas um clique de distância.</p>
-    <p>Nossa equipe está aqui para tornar sua jornada de compras o mais suave e agradável possível. Se surgir alguma dúvida ou se precisar de assistência em qualquer momento, não hesite em entrar em contato conosco. Estamos aqui para ajudar.</p>
-    <p>Esperamos que sua experiência no Magnífico Ponto seja gratificante e que você encontre exatamente o que procura. Prepare-se para descobrir um novo mundo de compras online. Uma vez mais, seja muito bem-vindo!</p>
-    <p>Atenciosamente,<br>Equipe Magnífico Ponto</p>
-</div>
-<div class="row justify-content-center">
-    <a class="btn btn-success" asp-area="" asp-controller="Home" asp-action="Index">Clique aqui para entrar no site</a>
-</div>
+            @*
+        else
+        {
+        <p>
+        Please check your email to confirm your account.
+        </p>
+        }
+        *@
+        }
+
     </main>
-
-
-    @section Scripts {
-        <partial name="_ValidationScriptsPartial" />
-    }
-
 
     <!-- JAVASCRIPT FILES -->
     <script src="~/front/js/jquery.min.js"></script>
@@ -103,9 +101,3 @@
 </body>
 
 </html>
-
-
-
-
-*@
-

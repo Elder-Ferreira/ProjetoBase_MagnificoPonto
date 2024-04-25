@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "L/u1L9vDbF3uvzQA1mGMDqjDXMTVMykvKGDvIe4M5Fc=",
+  "Hash": "q8uRYbwaq1kjBhGS19rbV/Di8QWanky2HN2J49+5R+c=",
   "Source": "ProjetoBase_MagnificoPonto",
   "BasePath": "_content/ProjetoBase_MagnificoPonto",
   "Mode": "Default",
@@ -1193,6 +1193,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Workspace\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ProjetoBase_MagnificoPonto.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Workspace\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\wwwroot\\Amigurumis\\6449e984-0a2b-4e67-a428-770d6998513b_Girafa.jpg",
+      "SourceId": "ProjetoBase_MagnificoPonto",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Workspace\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\wwwroot\\",
+      "BasePath": "_content/ProjetoBase_MagnificoPonto",
+      "RelativePath": "Amigurumis/6449e984-0a2b-4e67-a428-770d6998513b_Girafa.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Amigurumis\\6449e984-0a2b-4e67-a428-770d6998513b_Girafa.jpg"
     },
     {
       "Identity": "C:\\Workspace\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\wwwroot\\css\\site.css",
