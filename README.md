@@ -6,7 +6,7 @@
 - Implementar rotas de acesso para paginas (ok)
 - Listar todos os produtos cadastrados em uma View Produtos separada (ok)
 - Criar associação Pedidos e Produtos (a fazer)
-- Inserir galeria de imagens (implementado parcialmente)
+- Inserir galeria de imagens (implementado parcialmente, corrigir caminho (ImagePath))
 - Formatar textos formulário de produtos (ok)
 - Validação de dados inseridos pelo usuário (implementado parcialmente)
 - Criar páginas da área Admin (implementado parcialmente)
