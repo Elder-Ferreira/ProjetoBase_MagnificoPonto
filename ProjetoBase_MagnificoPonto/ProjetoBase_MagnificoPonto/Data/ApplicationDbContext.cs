@@ -14,5 +14,6 @@ namespace ProjetoBase_MagnificoPonto.Data
         public DbSet<ProdutoModel> Produtos { get; set; }
         public DbSet<ContatoModel> Contatos { get; set; }
         public DbSet<FormEntregaModel> FormEntregas { get; set; }
+        public DbSet<RelatorioModel> Relatorios { get; set; }
     }
 }
