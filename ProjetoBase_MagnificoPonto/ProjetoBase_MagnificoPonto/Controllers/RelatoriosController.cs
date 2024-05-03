@@ -1,83 +1,161 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using ProjetoBase_MagnificoPonto.Data;
+using ProjetoBase_MagnificoPonto.Models;
 
 namespace ProjetoBase_MagnificoPonto.Controllers
 {
     public class RelatoriosController : Controller
     {
-        // GET: RelatoriosController
-        public ActionResult Index()
+        private readonly ApplicationDbContext _context;
+
+        public RelatoriosController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
+        // GET: Relatorios
+        public async Task<IActionResult> Index()
+        {
+              return View(await _context.Relatorios.ToListAsync());
+        }
+
+        // GET: Relatorios/Details/5
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null || _context.Relatorios == null)
+            {
+                return NotFound();
+            }
+
+            var relatorioModel = await _context.Relatorios
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (relatorioModel == null)
+            {
+                return NotFound();
+            }
+
+            return View(relatorioModel);
+        }
+
+        // GET: Relatorios/Create
+        public IActionResult Create()
         {
             return View();
         }
 
-        // GET: RelatoriosController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        // GET: RelatoriosController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: RelatoriosController/Create
+        // POST: Relatorios/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<IActionResult> Create([Bind("Id,Nome,Quantidade,Cor,Tamanho,Preco,Categoria,Descrição,TempoConfeccao,ProntaEntrega,PlataformaVenda,DataVenda")] RelatorioModel relatorioModel)
         {
-            try
+            if (ModelState.IsValid)
             {
+                _context.Add(relatorioModel);
+                await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            catch
-            {
-                return View();
-            }
+            return View(relatorioModel);
         }
 
-        // GET: RelatoriosController/Edit/5
-        public ActionResult Edit(int id)
+        // GET: Relatorios/Edit/5
+        public async Task<IActionResult> Edit(int? id)
         {
-            return View();
+            if (id == null || _context.Relatorios == null)
+            {
+                return NotFound();
+            }
+
+            var relatorioModel = await _context.Relatorios.FindAsync(id);
+            if (relatorioModel == null)
+            {
+                return NotFound();
+            }
+            return View(relatorioModel);
         }
 
-        // POST: RelatoriosController/Edit/5
+        // POST: Relatorios/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Quantidade,Cor,Tamanho,Preco,Categoria,Descrição,TempoConfeccao,ProntaEntrega,PlataformaVenda,DataVenda")] RelatorioModel relatorioModel)
         {
-            try
+            if (id != relatorioModel.Id)
             {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(relatorioModel);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!RelatorioModelExists(relatorioModel.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
                 return RedirectToAction(nameof(Index));
             }
-            catch
-            {
-                return View();
-            }
+            return View(relatorioModel);
         }
 
-        // GET: RelatoriosController/Delete/5
-        public ActionResult Delete(int id)
+        // GET: Relatorios/Delete/5
+        public async Task<IActionResult> Delete(int? id)
         {
-            return View();
+            if (id == null || _context.Relatorios == null)
+            {
+                return NotFound();
+            }
+
+            var relatorioModel = await _context.Relatorios
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (relatorioModel == null)
+            {
+                return NotFound();
+            }
+
+            return View(relatorioModel);
         }
 
-        // POST: RelatoriosController/Delete/5
-        [HttpPost]
+        // POST: Relatorios/Delete/5
+        [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            try
+            if (_context.Relatorios == null)
             {
-                return RedirectToAction(nameof(Index));
+                return Problem("Entity set 'ApplicationDbContext.Relatorios'  is null.");
             }
-            catch
+            var relatorioModel = await _context.Relatorios.FindAsync(id);
+            if (relatorioModel != null)
             {
-                return View();
+                _context.Relatorios.Remove(relatorioModel);
             }
+            
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+        private bool RelatorioModelExists(int id)
+        {
+          return _context.Relatorios.Any(e => e.Id == id);
         }
     }
 }

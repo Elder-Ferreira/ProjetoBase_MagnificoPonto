@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProjetoBase_MagnificoPonto")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f0fdfab6fc084b7b902279b01a54beefdc0efd8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+12e795d1ef22637438720e0630dcf30f7f5ff421")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProjetoBase_MagnificoPonto")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProjetoBase_MagnificoPonto")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
