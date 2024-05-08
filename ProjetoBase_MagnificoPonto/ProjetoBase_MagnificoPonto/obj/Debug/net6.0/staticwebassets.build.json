@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "q8uRYbwaq1kjBhGS19rbV/Di8QWanky2HN2J49+5R+c=",
+  "Hash": "YdrKkrtbm6cB/WEIMQTvj5p+HovCXvn8x7zb6l8AW10=",
   "Source": "ProjetoBase_MagnificoPonto",
   "BasePath": "_content/ProjetoBase_MagnificoPonto",
   "Mode": "Default",
@@ -1212,6 +1212,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Amigurumis\\6449e984-0a2b-4e67-a428-770d6998513b_Girafa.jpg"
+    },
+    {
+      "Identity": "C:\\Workspace\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\wwwroot\\Amigurumis\\9c8762f0-2ebe-4f45-a539-4a8a73e062bc_Mamute.JPG",
+      "SourceId": "ProjetoBase_MagnificoPonto",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Workspace\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\wwwroot\\",
+      "BasePath": "_content/ProjetoBase_MagnificoPonto",
+      "RelativePath": "Amigurumis/9c8762f0-2ebe-4f45-a539-4a8a73e062bc_Mamute.JPG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Amigurumis\\9c8762f0-2ebe-4f45-a539-4a8a73e062bc_Mamute.JPG"
     },
     {
       "Identity": "C:\\Workspace\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\wwwroot\\css\\site.css",

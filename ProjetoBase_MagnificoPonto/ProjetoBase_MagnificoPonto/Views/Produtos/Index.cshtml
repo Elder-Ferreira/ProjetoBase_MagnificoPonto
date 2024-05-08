@@ -38,7 +38,7 @@
     <p>
         <a class="btn btn-success" asp-action="Create">Inserir novo item</a>
     </p>
-    <table class="table">
+    <table id="Cadastro" class="table">
         <thead>
             <tr class="text-center">
                 <th>
@@ -81,9 +81,10 @@
             {
                 <tr class="text-center align-middle">
                     <td>
-                        <img src="/Amigurumis/6449e984-0a2b-4e67-a428-770d6998513b_Girafa.jpg" width="100" />
-                        @*<img src="/Amigurumis/@Html.DisplayFor(modelItem => item.ImageFileName)" width="150" />*@
+                        <img src="/Amigurumis/@Html.DisplayFor(modelItem => item.ImageFileName)" width="150" />
 
+                        @*<img src="/Amigurumis/6449e984-0a2b-4e67-a428-770d6998513b_Girafa.jpg" width="100" />*@
+                        @*<img src="/Amigurumis/@item.ImageFileName" width="150" />*@
                     <td>
                             @Html.DisplayFor(modelItem => item.Nome)
                     </td>
