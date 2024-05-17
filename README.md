@@ -11,3 +11,4 @@
 - Validação de dados inseridos pelo usuário (implementado parcialmente)
 - Criar páginas da área Admin (implementado parcialmente)
 - Formulario de endereço de entrega (ok)
+- Campos para personalização do item-produto (a fazer)
