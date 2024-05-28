@@ -13,9 +13,13 @@ namespace ProjetoBase_MagnificoPonto.Models
         [Required(ErrorMessage = "Insira o nome do item!")]
         public string Nome { get; set; }
 
-        [Display(Name = "Referência")]
-        [Required(ErrorMessage = "Insira a referência do item!")]
-        public string Referencia { get; set; }
+        [Display(Name = "Quantidade")]
+        [Required(ErrorMessage = "Insira a quantidade disponível do item!")]
+        public int Quantidade { get; set; }
+
+        [Display(Name = "Peso (em gramas)")]
+        [Required(ErrorMessage = "Insira o peso unitário do item!")]
+        public double Peso { get; set; }
 
         [Display(Name = "Cor Predominante")]
         [Required(ErrorMessage = "Informe a cor predominante do item!")]
@@ -47,10 +51,8 @@ namespace ProjetoBase_MagnificoPonto.Models
         [Required(ErrorMessage = "Informe se o produto possui estoque!")]
         public bool ProntaEntrega { get; set; }
 
-        public DateTime CreatedAt { get; set; }
-
         [Display(Name = "Upload da imagem")]
-      //[Required(ErrorMessage = "Insira uma imagem do produto!")]
+        //[Required(ErrorMessage = "Insira uma imagem do produto!")]
         public string ImageFileName { get; set; }
     }
 }

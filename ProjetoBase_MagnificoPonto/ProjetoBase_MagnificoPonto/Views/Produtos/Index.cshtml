@@ -42,10 +42,13 @@
         <thead>
             <tr class="text-center align-middle">
                 <th class="text-center align-middle">
-                    @* @Html.DisplayNameFor(model => model.ImageFileName) *@ Foto
+                    Foto
                 </th>
                 <th>
-                    @* @Html.DisplayNameFor(model => model.Nome) *@ Amigurumi
+                    Amigurumi
+                </th>
+                <th>
+                    Qtd.
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Cor)
@@ -60,13 +63,8 @@
                     @Html.DisplayNameFor(model => model.Categoria)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.TempoConfeccao)
+                    @* @Html.DisplayNameFor(model => model.TempoConfeccao) *@ Confecção
                 </th>
-                @*
-                <th>
-                @Html.DisplayNameFor(model => model.ProntaEntrega)
-                </th>
-                *@
                 <th class="text-center align-middle">
                     Gerenciar Produtos
                 </th>
@@ -75,37 +73,38 @@
         <tbody>
             @foreach (var item in Model)
             {
-                <tr class="text-center align-middle">
+                <tr class="text-start align-middle">
                     <td>
-                        <img src="/Amigurumis/@Html.DisplayFor(modelItem => item.ImageFileName)" width="150" />
-
-                        @*<img src="/Amigurumis/6449e984-0a2b-4e67-a428-770d6998513b_Girafa.jpg" width="100" />*@
-                        @*<img src="/Amigurumis/@item.ImageFileName" width="150" />*@
-                    <td>
-                            @Html.DisplayFor(modelItem => item.Nome)
-                    </td>                    
-                    <td>
-                            @Html.DisplayFor(modelItem => item.Cor)
+                        <img src="/Amigurumis/@Html.DisplayFor(modelItem => item.ImageFileName)" width="125" />
                     </td>
                     <td>
-                            @Html.DisplayFor(modelItem => item.Tamanho)
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td class="text-start align-middle">
+                        @Html.DisplayFor(modelItem => item.Quantidade)
                     </td>
                     <td>
-                            @Html.DisplayFor(modelItem => item.Preco)
+                        @Html.DisplayFor(modelItem => item.Cor)
                     </td>
                     <td>
-                            @Html.DisplayFor(modelItem => item.Categoria)
+                        @Html.DisplayFor(modelItem => item.Tamanho)
                     </td>
                     <td>
-                            @Html.DisplayFor(modelItem => item.TempoConfeccao) dias úteis
+                        @Html.DisplayFor(modelItem => item.Preco)
                     </td>
-                        @*
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Categoria)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TempoConfeccao) dias úteis
+                    </td>
+                    @*
                 <td>
                 @Html.DisplayFor(modelItem => item.ProntaEntrega)
                 </td>
                 *@
                     <td>
-                        <div>
+                        <div class="text-sm-left">
                             <a class="btn btn-warning btn-sm" asp-action="Edit" asp-route-id="@item.Id">Editar</a>
                             <a class="btn btn-info btn-sm" asp-action="Details" asp-route-id="@item.Id">Detalhes</a>
                             <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@item.Id">Apagar</a>

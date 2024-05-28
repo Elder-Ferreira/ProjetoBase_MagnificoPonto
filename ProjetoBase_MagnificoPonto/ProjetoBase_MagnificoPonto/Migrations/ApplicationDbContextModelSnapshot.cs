@@ -308,9 +308,6 @@ namespace ProjetoBase_MagnificoPonto.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("Descrição")
                         .IsRequired()
                         .HasMaxLength(5000)
@@ -323,15 +320,17 @@ namespace ProjetoBase_MagnificoPonto.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<double>("Peso")
+                        .HasColumnType("float");
+
                     b.Property<decimal>("Preco")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<bool>("ProntaEntrega")
                         .HasColumnType("bit");
 
-                    b.Property<string>("Referencia")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Quantidade")
+                        .HasColumnType("int");
 
                     b.Property<string>("Tamanho")
                         .IsRequired()
