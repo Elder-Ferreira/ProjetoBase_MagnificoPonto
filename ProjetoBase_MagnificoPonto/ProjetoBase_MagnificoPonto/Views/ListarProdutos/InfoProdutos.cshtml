@@ -108,8 +108,18 @@
                                 </select>
                             </div>
 
-                            <div class="col-lg-6 col-12 mt-4 mt-lg-0">
+                            <div class="col-lg-6 col-12 mt-4 mt-lg-0 mb-4">
                                 <button type="submit" class="btn custom-btn cart-btn" data-bs-toggle="modal" data-bs-target="#cart-modal">Adicionar ao carrinho</button>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Descrição" class="control-label mb-2">
+                                    Selecione as cores para o seu amigurumi. Ex.: Corpo(8176), Lacinho(5210).
+                                    Informe se que adicionar: laço, gravata, nome bordado(sujeito a execução caso couber)
+                                    Partes não informadas seguirão a cor do modelo na foto.
+                                </label>
+                                <textarea asp-for="Descrição" class="form-control" rows="4"></textarea>
+                                <span asp-validation-for="Descrição" class="text-danger"></span>
                             </div>
 
                             <p>
@@ -124,6 +134,8 @@
                 </div>
             </div>
         </section>
+
+        @*
 
         <section class="related-product section-padding border-top">
             <div class="container">
@@ -212,7 +224,7 @@
                 </div>
             </div>
         </section>
-
+        *@
     </main>
 
 

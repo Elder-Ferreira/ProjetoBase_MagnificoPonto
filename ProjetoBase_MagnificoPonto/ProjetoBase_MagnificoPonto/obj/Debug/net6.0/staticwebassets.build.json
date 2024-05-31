@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "q8uRYbwaq1kjBhGS19rbV/Di8QWanky2HN2J49+5R+c=",
+  "Hash": "wcfSXx8C17DLDVLXSolB5vI4dEakgJWhyKDZuknSQVw=",
   "Source": "ProjetoBase_MagnificoPonto",
   "BasePath": "_content/ProjetoBase_MagnificoPonto",
   "Mode": "Default",
@@ -1195,6 +1195,25 @@
       "OriginalItemSpec": "C:\\Workspace\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ProjetoBase_MagnificoPonto.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Workspace\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\wwwroot\\Amigurumis\\4bc8f9f2-ae29-4800-9fa4-c63b1628e57a_Leao.JPG",
+      "SourceId": "ProjetoBase_MagnificoPonto",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Workspace\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\wwwroot\\",
+      "BasePath": "_content/ProjetoBase_MagnificoPonto",
+      "RelativePath": "Amigurumis/4bc8f9f2-ae29-4800-9fa4-c63b1628e57a_Leao.JPG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Amigurumis\\4bc8f9f2-ae29-4800-9fa4-c63b1628e57a_Leao.JPG"
+    },
+    {
       "Identity": "C:\\Workspace\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\wwwroot\\Amigurumis\\6449e984-0a2b-4e67-a428-770d6998513b_Girafa.jpg",
       "SourceId": "ProjetoBase_MagnificoPonto",
       "SourceType": "Discovered",
@@ -1269,6 +1288,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Workspace\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\wwwroot\\front\\Cores\\Cores.jpg",
+      "SourceId": "ProjetoBase_MagnificoPonto",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Workspace\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\wwwroot\\",
+      "BasePath": "_content/ProjetoBase_MagnificoPonto",
+      "RelativePath": "front/Cores/Cores.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\front\\Cores\\Cores.jpg"
     },
     {
       "Identity": "C:\\Workspace\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\wwwroot\\front\\css\\bootstrap.min.css",

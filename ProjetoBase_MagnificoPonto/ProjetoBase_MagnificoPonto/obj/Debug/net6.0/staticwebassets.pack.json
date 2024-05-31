@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\ProjetoBase_MagnificoPonto.bundle.scp.css"
     },
     {
+      "Id": "C:\\Workspace\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\wwwroot\\Amigurumis\\4bc8f9f2-ae29-4800-9fa4-c63b1628e57a_Leao.JPG",
+      "PackagePath": "staticwebassets\\Amigurumis\\4bc8f9f2-ae29-4800-9fa4-c63b1628e57a_Leao.JPG"
+    },
+    {
       "Id": "C:\\Workspace\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\wwwroot\\Amigurumis\\6449e984-0a2b-4e67-a428-770d6998513b_Girafa.jpg",
       "PackagePath": "staticwebassets\\Amigurumis\\6449e984-0a2b-4e67-a428-770d6998513b_Girafa.jpg"
     },
@@ -19,6 +23,10 @@
     {
       "Id": "C:\\Workspace\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Workspace\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\wwwroot\\front\\Cores\\Cores.jpg",
+      "PackagePath": "staticwebassets\\front\\Cores\\Cores.jpg"
     },
     {
       "Id": "C:\\Workspace\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\wwwroot\\front\\css\\bootstrap-icons.css",
