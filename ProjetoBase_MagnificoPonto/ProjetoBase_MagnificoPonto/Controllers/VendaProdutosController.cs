@@ -19,28 +19,29 @@ namespace ProjetoBase_MagnificoPonto.Controllers
             _context = context;
         }
 
-        // GET: VendaProdutos
-        public async Task<IActionResult> Index()
+        // GET: ListarProdutos
+        public async Task<IActionResult> ListaProdutos()
         {
-              return View(await _context.VendaProdutos.ToListAsync());
+            var listarProdutos = await _context.Produtos.ToListAsync();
+            return View(listarProdutos);
         }
 
         // GET: VendaProdutos/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> InfoProdutos(int? id)
         {
-            if (id == null || _context.VendaProdutos == null)
+            if (id == null || _context.Produtos == null)
             {
                 return NotFound();
             }
 
-            var vendaProdutosModel = await _context.VendaProdutos
+            var produtoModel = await _context.Produtos
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (vendaProdutosModel == null)
+            if (produtoModel == null)
             {
                 return NotFound();
             }
 
-            return View(vendaProdutosModel);
+            return View(produtoModel);
         }
 
         // GET: VendaProdutos/Create
