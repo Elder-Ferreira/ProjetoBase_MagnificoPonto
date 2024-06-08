@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<ProjetoBase_MagnificoPonto.Models.ProdutoModel>
+@* @model IEnumerable<ProjetoBase_MagnificoPonto.Models.VendaProdutosModel> *@
 
 @{
     ViewData["Title"] = "Index";
@@ -87,7 +88,7 @@
                                         <h5 class="product-title mb-0">
                                             <a href="product-detail.html" class="product-title-link">@Html.DisplayFor(modelItem => item.Nome)</a>
                                         </h5>
-                                        <a class="btn btn-success btn-sm" asp-action="InfoProdutos" asp-route-id="@item.Id">Ver detalhes</a>
+                                        <a class="btn btn-success btn-sm" asp-action="Create" asp-route-id="@item.Id">Ver detalhes</a>
                                     </div>
                                     <small class="product-price text-muted ms-auto">@Html.DisplayFor(modelItem => item.Preco)</small>
                                 </div>
