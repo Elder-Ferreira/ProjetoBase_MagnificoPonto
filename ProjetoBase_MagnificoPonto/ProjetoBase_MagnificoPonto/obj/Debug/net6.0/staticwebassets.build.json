@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wcfSXx8C17DLDVLXSolB5vI4dEakgJWhyKDZuknSQVw=",
+  "Hash": "1rT1feXmaeiabv+7KRtDyiOF94ZRcMzT2LSqkeCDDdw=",
   "Source": "ProjetoBase_MagnificoPonto",
   "BasePath": "_content/ProjetoBase_MagnificoPonto",
   "Mode": "Default",
@@ -1231,6 +1231,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Amigurumis\\6449e984-0a2b-4e67-a428-770d6998513b_Girafa.jpg"
+    },
+    {
+      "Identity": "C:\\Workspace\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\wwwroot\\CoresCatalogo\\CoresCatalogo.pdf",
+      "SourceId": "ProjetoBase_MagnificoPonto",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Workspace\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\wwwroot\\",
+      "BasePath": "_content/ProjetoBase_MagnificoPonto",
+      "RelativePath": "CoresCatalogo/CoresCatalogo.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\CoresCatalogo\\CoresCatalogo.pdf"
     },
     {
       "Identity": "C:\\Workspace\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\ProjetoBase_MagnificoPonto\\wwwroot\\css\\site.css",
