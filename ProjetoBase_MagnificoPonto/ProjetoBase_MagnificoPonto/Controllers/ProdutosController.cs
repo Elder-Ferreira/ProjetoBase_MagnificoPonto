@@ -70,36 +70,6 @@ namespace ProjetoBase_MagnificoPonto.Controllers
                 foto.CopyTo(stream);
             }
 
-
-            if (ModelState.IsValid)
-            {
-                _context.Add(produtoModel);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(produtoModel);
-        }
-
-
-        /*
-         
-         // POST: Produtos/Create        
-        [HttpPost]
-        public async Task<IActionResult> Create(ProdutoModel produtoModel, IFormFile foto)
-        {
-            string caminhoParaSalvarImagem = caminhoServidor + "\\Amigurumis\\";
-            string novoNomeParaImagem = Guid.NewGuid().ToString() + "_" + foto.FileName;
-
-            if (!Directory.Exists(caminhoParaSalvarImagem))
-            {
-                Directory.CreateDirectory(caminhoParaSalvarImagem);
-            }
-
-            using (var stream = System.IO.File.Create(caminhoParaSalvarImagem + novoNomeParaImagem))
-            {
-                foto.CopyTo(stream);
-            }
-
             produtoModel.ImageFileName = novoNomeParaImagem;
 
             if (ModelState.IsValid)
@@ -109,9 +79,8 @@ namespace ProjetoBase_MagnificoPonto.Controllers
                 return RedirectToAction(nameof(Index));
             }
             return View(produtoModel);
-        }        
-         
-         */
+        }
+ 
 
 
         // GET: Produtos/Edit/5
