@@ -15,3 +15,5 @@
 - Inserir paleta de cores e referencia para personalização (ok)
 - Personalização carrinho de compras (ok)
 - Relatório de vendas (ok)
+- Gerenciamento de login baseado em Roles
+- Restrição de acesso por meio do Identity/Areas/Admin
