@@ -33,7 +33,7 @@
 
 <body>
 
-    <h1>Lista de produtos</h1>
+    <div><span><br /><br /><br /><br /><br /></span></div>
 
     <p>
         <a class="btn btn-success" asp-action="Create">Inserir novo item</a>
@@ -47,7 +47,7 @@
                 <th>
                     Amigurumi
                 </th>
-                <th>
+                <th class="text-center">
                     Qtd.
                 </th>
                 <th>
@@ -75,18 +75,18 @@
             {
                 <tr class="text-start align-middle">
                     <td>
-                        <img src="/Amigurumis/@Html.DisplayFor(modelItem => item.ImageFileName)" width="125" />
+                        <img src="/Amigurumis/@Html.DisplayFor(modelItem => item.ImageFileName)" width="80" />
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Nome)
                     </td>
-                    <td class="text-start align-middle">
+                    <td class="text-center align-middle">
                         @Html.DisplayFor(modelItem => item.Quantidade)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Cor)
                     </td>
-                    <td>
+                    <td class="text-center align-middle">
                         @Html.DisplayFor(modelItem => item.Tamanho)
                     </td>
                     <td>

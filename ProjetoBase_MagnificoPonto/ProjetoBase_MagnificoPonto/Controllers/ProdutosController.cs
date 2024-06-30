@@ -55,6 +55,7 @@ namespace ProjetoBase_MagnificoPonto.Controllers
 
         // POST: Produtos/Create        
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(ProdutoModel produtoModel, IFormFile foto)
         {
             string caminhoParaSalvarImagem = caminhoServidor + "\\Amigurumis\\";
@@ -80,8 +81,6 @@ namespace ProjetoBase_MagnificoPonto.Controllers
             }
             return View(produtoModel);
         }
- 
-
 
         // GET: Produtos/Edit/5
         public async Task<IActionResult> Edit(int? id)
@@ -101,14 +100,13 @@ namespace ProjetoBase_MagnificoPonto.Controllers
 
         // POST: Produtos/Edit/5        
         [HttpPost]
-        
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, ProdutoModel produtoModel, IFormFile foto)
         {
             if (id != produtoModel.Id)
             {
                 return NotFound();
             }
-                       
 
             if (ModelState.IsValid)
             {
@@ -147,36 +145,6 @@ namespace ProjetoBase_MagnificoPonto.Controllers
             }
             return View(produtoModel);
         }
-
-        /*
-         public async Task<IActionResult> Create(ProdutoModel produtoModel, IFormFile foto)
-        {
-            string caminhoParaSalvarImagem = caminhoServidor + "\\Amigurumis\\";
-            string novoNomeParaImagem = Guid.NewGuid().ToString() + "_" + foto.FileName;
-
-            if (!Directory.Exists(caminhoParaSalvarImagem))
-            {
-                Directory.CreateDirectory(caminhoParaSalvarImagem);
-            }
-
-            using (var stream = System.IO.File.Create(caminhoParaSalvarImagem + novoNomeParaImagem))
-            {
-                foto.CopyTo(stream);
-            }
-
-
-            if (ModelState.IsValid)
-            {
-                _context.Add(produtoModel);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(produtoModel);
-        }
-
-        */
-
-
 
         // GET: Produtos/Delete/5
         public async Task<IActionResult> Delete(int? id)
@@ -221,34 +189,6 @@ namespace ProjetoBase_MagnificoPonto.Controllers
         }
 
 
-        /*
-
-        public IActionResult Upload()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult Upload(IFormFile ImageFileName)
-        {
-            string caminhoParaSalvarImagem = caminhoServidor + "\\Amigurumis\\";
-            string novoNomeParaImagem = Guid.NewGuid().ToString() + " " + ImageFileName.FileName;
-
-            if (!Directory.Exists(caminhoParaSalvarImagem))
-            {
-                Directory.CreateDirectory(caminhoParaSalvarImagem);
-            }
-
-            using (var stream = System.IO.File.Create(caminhoParaSalvarImagem + novoNomeParaImagem))
-            {
-                ImageFileName.CopyToAsync(stream);
-            }
-
-            return RedirectToAction("Index");
-        }
-
-        */
 
     }
 }
-

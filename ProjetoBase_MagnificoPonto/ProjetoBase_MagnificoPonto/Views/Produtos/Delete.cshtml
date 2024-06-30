@@ -33,15 +33,21 @@
 
 <body>
 
-    <h1>Apagar</h1>
+    <div><span><br /><br /><br /><br /></span></div>
 
     @*
     <h3>Deseja realmente apagar os registros do produto?</h3>
     *@
     <div>
-        <h4>Dados do produto</h4>
+        <h4>Apagar dados do produto</h4>
         <hr />
         <dl class="row">
+            <dt class="col-sm-2">
+                Foto Amigurumi
+            </dt>
+            <dd class="col-sm-10">
+                <img src="~/Amigurumis/@Html.DisplayFor(model => model.ImageFileName)" width="150" />
+            </dd>
             <dt class="col-sm-2">
                 @Html.DisplayNameFor(model => model.Nome)
             </dt>
@@ -55,10 +61,10 @@
                 @Html.DisplayFor(model => model.Quantidade)
             </dd>
             <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Peso)
+                Peso
             </dt>
             <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Peso)
+                @Html.DisplayFor(model => model.Peso) gramas
             </dd>
             <dt class="col-sm-2">
                 @Html.DisplayNameFor(model => model.Cor)
@@ -94,19 +100,13 @@
                 @Html.DisplayNameFor(model => model.TempoConfeccao)
             </dt>
             <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.TempoConfeccao)
+                @Html.DisplayFor(model => model.TempoConfeccao) dias úteis
             </dd>
             <dt class="col-sm-2">
                 @Html.DisplayNameFor(model => model.ProntaEntrega)
             </dt>
             <dd class="col-sm-10">
                 @Html.DisplayFor(model => model.ProntaEntrega)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.ImageFileName)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.ImageFileName)
             </dd>
         </dl>
 
