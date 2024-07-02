@@ -18,3 +18,4 @@
 - Gerenciamento de login baseado em Roles
 - Restrição de acesso por meio do Identity/Areas/Admin
 - Ocultar/liberar acesso a links em navbar de acordo com tipo de usuario autenticado no sistema (ok)
+- Gerenciamento do perfil do usuário
